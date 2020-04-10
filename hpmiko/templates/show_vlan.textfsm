@@ -1,0 +1,10 @@
+Value PORT ([A-Z0-9]+)
+Value MODE (\S+)
+Value UNKNOWN (\w+)
+Value STATUS (\w+)
+
+Start
+  ^.*Port Information -> PORT
+
+PORT
+  ^\s+${PORT}\s+${MODE}\s+${UNKNOWN}\s+${STATUS} -> Record

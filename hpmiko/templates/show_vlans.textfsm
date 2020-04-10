@@ -1,0 +1,20 @@
+Value Filldown MAX_VLANS (\d+)
+Value Filldown PRIMARY_VLAN (.+)
+Value Filldown MANAGEMENT_VLAN (.+)
+Value Required VLAN_ID (\d+)
+Value VLAN_NAME (.+?)
+Value VLAN_STATUS (Port-based|Protocol|Dynamic)
+Value VLAN_VOICE (Yes|No)
+Value VLAN_JUMBO (Yes|No)
+
+Start
+  ^\s*Status -> INFO
+
+INFO
+  ^\s*Maximum VLANs to support :\s+${MAX_VLANS}
+  ^\s*Primary VLAN :\s+${PRIMARY_VLAN}
+  ^\s*Management VLAN :\s+${MANAGEMENT_VLAN}
+  ^\s*VLAN ID -> VLANS
+
+VLANS
+  ^\s*${VLAN_ID}\s+${VLAN_NAME}\s+${VLAN_STATUS}\s+${VLAN_VOICE}\s+${VLAN_JUMBO} -> Record

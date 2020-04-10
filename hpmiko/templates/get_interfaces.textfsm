@@ -1,0 +1,9 @@
+Value PORT ([A-Z0-9]+)
+Value TYPE (.+)
+Value STATUS (Up|Down)
+
+Start
+  ^\s*Port -> NAMES
+
+NAMES
+  ^\s*${PORT}\s+${TYPE}\s+${STATUS} -> Record"""

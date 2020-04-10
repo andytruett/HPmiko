@@ -1,0 +1,11 @@
+Value PORT (\w+)
+Value TYPE (\S+)
+Value NAME (.+)
+
+Start
+  ^.*Port\s+Type -> NAMES
+
+NAMES
+  ^\s*${PORT}\s+${TYPE}\s+${NAME}$$ -> Record
+"""[summary]
+"""

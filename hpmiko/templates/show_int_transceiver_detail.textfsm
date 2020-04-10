@@ -1,0 +1,35 @@
+Value Required INTERFACE (.+)
+Value INTERFACE_INDEX (.+)
+Value TYPE (.+)
+Value MODEL (.+)
+Value CONNECTOR_TYPE (.+)
+Value WAVELENGTH (.+)
+Value TRANSFER_DISTANCE (.+)
+Value DIAG_SUPPORT (.+)
+Value SERIAL_NUMBER (.+)
+Value TEMP (.+)
+Value VOLTAGE (.+)
+Value TX_BIAS (.+)
+Value TX_POWER_MW (.+)
+Value TX_POWER_DBM (.+)
+Value RX_POWER_MW (.+)
+Value RX_POWER_DBM (.+)
+Value TIME_STAMP (.+)
+
+Start
+  ^\s*Transceiver.* -> Continue.Record
+  ^\s*Transceiver in ${INTERFACE}
+  ^\s*Interface Index\s+:\s+${INTERFACE_INDEX}
+  ^\s*Type\s+:\s+${TYPE}
+  ^\s*Model\s+:\s+${MODEL}
+  ^\s*Connector Type\s+:\s+${CONNECTOR_TYPE}
+  ^\s*Wavelength\s+:\s+${WAVELENGTH}
+  ^\s*Transfer Distance\s+:\s+${TRANSFER_DISTANCE}
+  ^\s*Diagnostic Support\s+:\s+${DIAG_SUPPORT}
+  ^\s*Serial Number\s+:\s+${SERIAL_NUMBER} -> Continue
+  ^\s*Temperature\s+:\s+${TEMP}
+  ^\s*Voltage\s+:\s+${VOLTAGE}
+  ^\s*Tx Bias\s+:\s+${TX_BIAS}
+  ^\s*Tx Power\s+:\s+${TX_POWER_MW},\s+${TX_POWER_DBM}
+  ^\s*Rx Power\s+:\s+${RX_POWER_MW},\s+${RX_POWER_DBM}
+  ^\s*Time Stamp\s+:\s+${TIME_STAMP}

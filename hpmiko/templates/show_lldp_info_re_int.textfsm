@@ -1,0 +1,31 @@
+Value LOCAL_PORT (.+)
+Value CHASSISTYPE (.+)
+Value CHASSISID (.+)
+Value PORTTYPE (.+)
+Value PORTID (.+)
+Value SYSNAME (.+)
+Value SYSTEM_DESCR (.+)
+Value PORTDESCR (.+)
+Value PVID (.+)
+Value SYS_CAP_SUPPORTED (.+)
+Value SYS_CAP_ENABLED (.+)
+Value MGT_ADDRESS_TYPE (.+)
+Value MGT_ADDRESS (.+)
+
+Start
+  ^.*LLDP Remote Device Information Detail -> LLDP
+
+LLDP
+  ^\s*Local Port\s*:\s*${LOCAL_PORT}
+  ^\s*ChassisType\s*:\s*${CHASSISTYPE}
+  ^\s*ChassisId\s*:\s*${CHASSISID}
+  ^\s*PortType\s*:\s*${PORTTYPE}
+  ^\s*PortId\s*:\s*${PORTID}
+  ^\s*SysName\s*:\s*${SYSNAME}
+  ^\s*System Descr\s*:\s*${SYSTEM_DESCR}
+  ^\s*PortDescr\s*:\s*${PORTDESCR}
+  ^\s*Pvid\s*:\s*${PVID}
+  ^\s*System Capabilities Supported\s*:\s*${SYS_CAP_SUPPORTED}
+  ^\s*System Capabilities Enabled\s*:\s*${SYS_CAP_ENABLED}
+  ^\s*Type\s*:\s*${MGT_ADDRESS_TYPE}
+  ^\s*Address\s*:\s*${MGT_ADDRESS}

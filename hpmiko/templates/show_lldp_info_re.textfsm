@@ -1,0 +1,8 @@
+Value LOCAL_PORT (\w+)
+
+Start
+  ^.*LocalPort -> LLDP
+
+LLDP
+  ^\s*${LOCAL_PORT} -> Record
+"""
