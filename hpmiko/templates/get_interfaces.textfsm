@@ -6,4 +6,4 @@ Start
   ^\s*Port -> NAMES
 
 NAMES
-  ^\s*${PORT}\s+${TYPE}\s+${STATUS} -> Record"""
+  ^\s*${PORT}\s+${TYPE}\s+${STATUS} -> Record

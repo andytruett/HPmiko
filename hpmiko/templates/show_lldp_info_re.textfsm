@@ -5,4 +5,3 @@ Start
 
 LLDP
   ^\s*${LOCAL_PORT} -> Record
-"""

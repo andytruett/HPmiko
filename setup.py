@@ -6,7 +6,7 @@ with open("README.rst", "r") as f:
 
 setuptools.setup(
     name="HPmiko",
-    version="1.0.0",
+    version="1.0.1",
     author="Andy Truett",
     author_email="andrew.truett@gmail.com",
     description="HPmiko is a middle-man script to simplify extracting data from HP/Aruba Procurve switches using Netmiko",

@@ -7,5 +7,3 @@ Start
 
 NAMES
   ^\s*${PORT}\s+${TYPE}\s+${NAME}$$ -> Record
-"""[summary]
-"""
