@@ -1,4 +1,4 @@
-# import aeromiko.templates
+# import hpmiko.templates
 import tempfile
 import textfsm
 import netmiko
@@ -35,9 +35,7 @@ class HP:
         }
 
         self.net_connect = netmiko.ConnectHandler(**switch)
-
         self.net_connect.find_prompt()
-        self.net_connect.send_command("ter len 1000")
 
     def disconnect(self):
         return self.net_connect.disconnect()
@@ -193,7 +191,7 @@ class HP:
         return name_info
 
     def get_interfaces(self):
-        command = "sh int custom all port type status"
+        command = "sh int status"
         template = "get_interfaces.textfsm"
 
         command_response = self.send_command(command)
